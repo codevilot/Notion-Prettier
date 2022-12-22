@@ -1,0 +1,21 @@
+{
+  "name": "markdown-helper",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && cp src/manifest.json dist/manifest.json",
+    "preview": "vite preview"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "prettier": "^2.8.1",
+    "vite": "^4.0.3"
+  },
+  "devDependencies": {
+    "@types/prettier": "^2.7.2"
+  }
+}

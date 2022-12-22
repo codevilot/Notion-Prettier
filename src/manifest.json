@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "notion",
+  "version": "1.0.6",
+  "description": "notion",
+  "author": "Namheon Baek",
+
+  "content_scripts": [
+    {
+      "js": ["main.js"],
+      "matches": ["https://www.notion.so/*", "https://github.com/*"]
+    }
+  ],
+  "type": "module"
+}
