@@ -1,6 +1,11 @@
 import { getSelectionText } from './getText';
+import { getShortcut } from './getShortcut';
+const shortcut = getShortcut();
 
-window.addEventListener('keydown', (e) => {
-  if (e.ctrlKey && e.key === 'Shift') getSelectionText();
-  console.log(1);
+window.addEventListener('keydown', ({ ctrlKey, key }) => {
+  if (ctrlKey && key === 'Shift') getSelectionText();
+});
+
+window.addEventListener('keyup', ({ key }) => {
+  if (key === 'Alt') shortcut.classList.toggle('open');
 });

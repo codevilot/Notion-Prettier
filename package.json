@@ -6,7 +6,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && cp src/manifest.json dist/manifest.json",
+    "build": "vite build && npm run manifest && npm run style",
+    "manifest": "cp src/manifest.json dist/manifest.json",
+    "style": "cp src/style.css dist/style.css",
     "preview": "vite preview"
   },
   "author": "",
