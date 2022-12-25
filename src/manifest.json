@@ -9,7 +9,11 @@
     {
       "js": ["main.js"],
       "css": ["style.css"],
-      "matches": ["https://www.notion.so/*", "https://github.com/*"]
+      "matches": [
+        "https://www.notion.so/*",
+        "https://github.com/*",
+        "https://www.tistory.com/*"
+      ]
     }
   ],
   "type": "module"
