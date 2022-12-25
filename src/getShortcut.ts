@@ -5,6 +5,7 @@ export function getShortcut() {
   document.body.append(shortcut);
   shortcut.innerHTML = `
   <h2>Notion 단축키모음</h2>
+  <div id="close-shortcut">⨉</div>
   <div><code>**</code>텍스트 굵게</div>
   <div><code>*</code>기울임꼴</div>
   <div><code>\`\`\`</code>인라인 코드</div>

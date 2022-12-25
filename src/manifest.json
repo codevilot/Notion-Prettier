@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Markdown Helper",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Markdown Helper helps you when using notion",
   "author": "Namheon Baek",
 
@@ -9,7 +9,7 @@
     {
       "js": ["main.js"],
       "css": ["style.css"],
-      "matches": ["https://www.notion.so/*"]
+      "matches": ["https://www.notion.so/*", "https://github.com/*"]
     }
   ],
   "type": "module"
