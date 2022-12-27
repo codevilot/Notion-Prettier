@@ -9,12 +9,15 @@ function makePrettier(selection: Selection) {
   });
 }
 async function copyText(selection: Selection) {
-  const text = makePrettier(selection);
-  await navigator.clipboard.writeText(text);
+  const textArr = makePrettier(selection).split('\n');
+  textArr.forEach((text, index) => {
+    document.execCommand('insertText', false, text);
+    if (index > textArr.length - 3) return;
+    document.execCommand('insertParagraph');
+  });
 }
 export function getSelectionText() {
   const selection = getSelection();
   if (!selection) return;
-  copyText(selection);
-  return;
+  return copyText(selection);
 }

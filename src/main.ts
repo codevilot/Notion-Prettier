@@ -1,9 +1,10 @@
 import { getSelectionText } from './getText';
 import { getShortcut } from './getShortcut';
 const shortcut = getShortcut();
-
-window.addEventListener('keydown', ({ ctrlKey, key }) => {
-  if (ctrlKey && key === 'Shift') getSelectionText();
+window.addEventListener('keydown', async ({ ctrlKey, key }) => {
+  if (ctrlKey && (key === 's' || key === 'S')) {
+    await getSelectionText();
+  }
 });
 
 window.addEventListener('keyup', ({ altKey, shiftKey, key }) => {
