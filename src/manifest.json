@@ -1,15 +1,15 @@
 {
   "manifest_version": 3,
-  "name": "Markdown Helper",
-  "version": "0.0.4",
-  "description": "Markdown Helper helps you when using notion",
+  "name": "Notion Prettier",
+  "version": "0.0.6",
+  "description": "Notion Prettier makes the code look prettier in Notion.",
   "author": "Namheon Baek",
 
   "content_scripts": [
     {
       "js": ["main.js"],
       "css": ["style.css"],
-      "matches": ["https://www.notion.so/*", "https://www.tistory.com/*"]
+      "matches": ["https://www.notion.so/*"]
     }
   ],
   "type": "module"

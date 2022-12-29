@@ -1,2 +1,3 @@
-# Markdown-Helper
-Markdown Helper helps you when using notion
+# Notion-Prettier
+
+Notion Prettier makes the code look prettier in Notion.

@@ -1,7 +1,7 @@
 export function getShortcut() {
   const shortcut = document.createElement('div');
 
-  shortcut.classList.add('markdown-helper-shortcut');
+  shortcut.classList.add('notion-prettier-shortcut');
   document.body.append(shortcut);
   shortcut.innerHTML = `
   <h2>Notion 단축키모음</h2>
