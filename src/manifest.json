@@ -1,10 +1,12 @@
 {
   "manifest_version": 3,
   "name": "Notion Prettier",
-  "version": "0.0.6",
+  "version": "0.0.8",
   "description": "Notion Prettier makes the code look prettier in Notion.",
   "author": "Namheon Baek",
-
+  "icons": {
+    "128": "icon128.png"
+  },
   "content_scripts": [
     {
       "js": ["main.js"],
