@@ -9,12 +9,12 @@ function makePrettier(selection: Selection) {
   });
 }
 async function copyText(selection: Selection) {
-  const textArr = makePrettier(selection).split('\n');
-  textArr.forEach((text, index) => {
-    document.execCommand('insertText', false, text);
-    if (index > textArr.length - 3) return;
-    document.execCommand('insertParagraph');
-  });
+  const textArr = makePrettier(selection);
+  document.execCommand(
+    'insertText',
+    false,
+    textArr.replace(/\n{1,}/gi, '$&\n').trim()
+  );
 }
 export function getSelectionText() {
   const selection = getSelection();
