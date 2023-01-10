@@ -1,43 +1,40 @@
-.notion-prettier-shortcut {
+.shortcut {
+  letter-spacing: -1px;
   position: absolute;
-  display: none;
-  top: 50%;
-  left: 50%;
-  z-index: 10;
-  background-color: #c4beaf;
-  padding: 30px;
-  transform: translate3d(-50%, -50%, 10px);
-  border-radius: 10px;
-  font-size: 20px;
-  box-shadow: 6px 6px 20px #afafaf, -6px -6px 20px #ffffff;
-  background: linear-gradient(145deg, #f7f6f3, #ece8dd);
-}
-.notion-prettier-shortcut.open {
-  display: block;
-}
-.notion-prettier-shortcut code {
-  font-family: inter-var, -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Helvetica, 'Apple Color Emoji', Arial, sans-serif, 'Segoe UI Emoji',
-    'Segoe UI Symbol';
-  font-weight: 544;
-  border: 1px solid var(--border-color-regular);
-  background: #f9f5f1;
-  border-radius: 5px;
+  background: #fbfbfa;
+  color: #19171199;
+  padding: 15px;
+  z-index: 1;
+  transition: all 0.5s;
   font-size: 14px;
+  word-break: keep-all;
+  border-bottom: 1px solid gray;
+}
+.shortcut div {
+  padding-bottom: 3px;
+}
+.shortcut.close {
+  transform: translate3d(-100%, 0, 0);
+  transition: all 0.5s;
+}
+.shortcut code {
+  background: #ededeb;
+  font-size: 13px;
   padding: 1px 5px;
-  margin-right: 10px;
-  background-color: #524f46;
-  color: #fff;
-  font-size: 17px;
-  font-weight: 100;
+  border-radius: 2px;
+  font-size: black;
+  border: 1px solid #b7b7b7;
 }
-.notion-prettier-shortcut h2 {
-  margin-block-start: 0;
-  margin-block-end: 0;
-  padding-bottom: 20px;
+.shortcut-title {
+  padding-bottom: 5px;
+  letter-spacing: 0px;
+  font-size: 16px;
+  font-weight: bold;
 }
-#close-shortcut {
+#close-button {
   position: absolute;
+  font-size: 18px;
   top: 10px;
-  right: 10px;
+  right: 15px;
+  color: black;
 }
