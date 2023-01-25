@@ -5,7 +5,6 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "vite",
     "build": "vite build && npm run manifest && npm run style && npm run icon",
     "manifest": "cp src/manifest.json dist/manifest.json",
     "icon": "cp src/icon128.png dist/icon128.png",

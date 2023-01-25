@@ -9,13 +9,13 @@
   font-size: 14px;
   word-break: keep-all;
   border-bottom: 1px solid gray;
+  transform: translate3d(-100%, 0, 0);
 }
 .shortcut div {
   padding-bottom: 3px;
 }
 .shortcut.close {
-  transform: translate3d(-100%, 0, 0);
-  transition: all 0.5s;
+  transform: translate3d(0, 0, 0);
 }
 .shortcut code {
   background: #ededeb;

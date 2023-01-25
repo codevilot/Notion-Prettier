@@ -64,5 +64,8 @@ export function createShortcutList() {
         Shortcut.classList.toggle('close');
       }
     },
+    close: () => {
+      Shortcut?.classList.remove('close');
+    },
   };
 }
