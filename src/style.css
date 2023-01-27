@@ -1,3 +1,12 @@
+.dark .shortcut {
+  background-color: #202020;
+  color: #9b9b9b;
+}
+.dark .shortcut code {
+  color: #eb5757;
+  background-color: rgba(135, 131, 120, 0.15);
+}
+
 .shortcut {
   letter-spacing: -1px;
   position: absolute;
@@ -31,6 +40,10 @@
   font-size: 16px;
   font-weight: bold;
 }
+.dark #close-button {
+  color: #9b9b9b;
+}
+
 #close-button {
   position: absolute;
   font-size: 18px;
