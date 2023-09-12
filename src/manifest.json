@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Notion Prettier",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "Notion Prettier makes the code look prettier in Notion.",
   "author": "Namheon Baek",
   "icons": {

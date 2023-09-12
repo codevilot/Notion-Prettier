@@ -1,3 +1,5 @@
+import { getLanguage } from './lib/getLanguage';
+
 const textInfo = {
   'ko-KR': {
     title: 'Shortcut List',
@@ -39,7 +41,7 @@ const textInfo = {
 
 export function createShortcutList() {
   let Shortcut: null | HTMLElement = null;
-  const desc = textInfo[navigator.language.includes('ko') ? 'ko-KR' : 'en-US'];
+  const desc = textInfo[getLanguage()];
   const ctrl = navigator.platform.includes('Win') ? 'ctrl' : 'cmd';
   return {
     toggle: () => {

@@ -1,19 +1,28 @@
 import { format } from 'prettier';
-import parserBabel from 'prettier/parser-babel';
-import parserHtml from 'prettier/parser-HTML';
-import parseryaml from 'prettier/parser-yaml';
-function makePrettier(selection: Selection) {
+import { parserErrorMessage, supportedParser } from './supportedParser';
+import { getLanguage } from './lib/getLanguage';
+
+type WebSelection = Selection & { baseNode: HTMLElement };
+
+function makePrettier(selection: WebSelection) {
+  const language = selection?.baseNode
+    ?.closest('[role="figure"]')
+    ?.querySelector('[role="button"]')
+    ?.textContent as keyof typeof supportedParser;
+
+  const { parser, plugins } = supportedParser?.[language];
   try {
     return format(String(selection), {
-      parser: 'babel',
-      plugins: [parserBabel, parserHtml, parseryaml],
+      parser: parser || 'babel',
+      plugins: plugins || [],
     });
   } catch (error) {
-    alert(error);
+    if (!parser && !plugins) alert(parserErrorMessage[getLanguage()]);
+    else alert(error);
     return null;
   }
 }
-async function copyText(selection: Selection) {
+async function copyText(selection: WebSelection) {
   const textArr = makePrettier(selection);
   textArr &&
     document.execCommand(
@@ -23,7 +32,8 @@ async function copyText(selection: Selection) {
     );
 }
 export function getSelectionText() {
-  const selection = getSelection();
+  const selection = getSelection() as WebSelection;
   if (!selection) return;
+
   return copyText(selection);
 }
