@@ -1,3 +1,10 @@
+import parserBabel from 'prettier/parser-babel';
+import parserHtml from 'prettier/parser-HTML';
+import parseryaml from 'prettier/parser-yaml';
+import parserTS from 'prettier/parser-typescript';
+import parserMD from 'prettier/parser-markdown';
+import parserGraphQL from 'prettier/parser-graphql';
+
 export const parserErrorMessage = {
   'ko-KR': '지원하지 않는 언어입니다.',
   'en-US': 'unsupported language',
@@ -117,7 +124,7 @@ export const supportedParser = {
   },
   GraphQL: {
     parser: 'graphql',
-    plugins: null,
+    plugins: [parserGraphQL],
   },
   Groovy: {
     parser: null,
@@ -129,7 +136,7 @@ export const supportedParser = {
   },
   HTML: {
     parser: 'html',
-    plugins: null,
+    plugins: [parserHtml],
   },
   Idris: {
     parser: null,
@@ -141,11 +148,11 @@ export const supportedParser = {
   },
   JavaScript: {
     parser: 'babel',
-    plugins: null,
+    plugins: [parserBabel],
   },
   JSON: {
     parser: 'json',
-    plugins: null,
+    plugins: [parserBabel],
   },
   Julia: {
     parser: null,
@@ -185,7 +192,7 @@ export const supportedParser = {
   },
   Markdown: {
     parser: 'markdown',
-    plugins: null,
+    plugins: [parserMD],
   },
   Markup: {
     parser: null,
@@ -312,8 +319,8 @@ export const supportedParser = {
     plugins: null,
   },
   TypeScript: {
-    parser: 'babel-ts',
-    plugins: null,
+    parser: 'typescript',
+    plugins: [parserTS],
   },
   'VB.Net': {
     parser: null,
@@ -341,6 +348,6 @@ export const supportedParser = {
   },
   YAML: {
     parser: 'yaml',
-    plugins: null,
+    plugins: [parseryaml],
   },
 };
