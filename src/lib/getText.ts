@@ -25,7 +25,6 @@ function makePrettier(selection: WebSelection, forcedLanguage?: string) {
 }
 export async function getSelectionText(language?: string) {
   const selection = getSelection() as WebSelection;
-  console.log(selection);
   if (!selection) return;
   const textArr = makePrettier(selection, language);
   return (
