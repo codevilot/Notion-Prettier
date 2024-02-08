@@ -1,4 +1,4 @@
-import { getLanguage } from './lib/getLanguage';
+import { getLanguage } from './getLanguage';
 
 const textInfo = {
   'ko-KR': {

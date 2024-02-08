@@ -1,13 +1,12 @@
 // vite.config.js
 import { resolve } from 'path';
 import { defineConfig } from 'vite';
-
+import { chromeExtension } from 'vite-plugin-chrome-extension';
 export default defineConfig({
   build: {
-    lib: {
-      entry: resolve(__dirname, 'src/main.ts'),
-      name: 'main',
-      fileName: 'main',
+    rollupOptions: {
+      input: 'src/manifest.json',
     },
   },
+  plugins: [chromeExtension()],
 });

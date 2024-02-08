@@ -1,5 +1,5 @@
-import { getSelectionText } from './getText';
-import { createShortcutList } from './ShortcutList';
+import { getSelectionText } from './lib/getText';
+import { createShortcutList } from './lib/ShortcutList';
 const Shortcut = createShortcutList();
 
 window.addEventListener('keydown', async ({ ctrlKey, metaKey, key }) => {
@@ -18,4 +18,8 @@ window.addEventListener('keyup', ({ altKey, shiftKey, key }) => {
 window.addEventListener('click', (e) => {
   const target = e.target as HTMLElement;
   if (target?.id && target.id === 'close-button') Shortcut.close();
+});
+
+chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+  if (request.type === 'prettier') getSelectionText(request.parser);
 });
