@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "build": "vite build && npm run manifest && npm run style && npm run icon",
+    "build": "vite build",
     "manifest": "cp src/manifest.json dist/manifest.json",
     "icon": "cp src/icon128.png dist/icon128.png",
     "style": "cp src/style.css dist/style.css",
@@ -14,8 +14,11 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "@types/chrome": "^0.0.260",
+    "build": "^0.1.4",
     "prettier": "^2.8.1",
-    "vite": "^4.0.3"
+    "vite": "^4.0.3",
+    "vite-plugin-chrome-extension": "^0.0.7"
   },
   "devDependencies": {
     "@types/prettier": "^2.7.2"

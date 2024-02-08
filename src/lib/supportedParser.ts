@@ -9,6 +9,7 @@ export const parserErrorMessage = {
   'ko-KR': '지원하지 않는 언어입니다.',
   'en-US': 'unsupported language',
 };
+
 export const supportedParser = {
   ABAP: {
     parser: null,
@@ -351,3 +352,7 @@ export const supportedParser = {
     plugins: [parseryaml],
   },
 };
+
+export const onlySupportedParser = Object.entries(supportedParser).filter(
+  ([, value]) => value.parser
+);
