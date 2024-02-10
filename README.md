@@ -17,6 +17,12 @@ Notion Prettier makes the code look prettier in Notion.
 
 ![image](https://user-images.githubusercontent.com/18400730/209900584-534e4176-7029-4863-ac2d-f9efcef9b7d1.png)
 
+### Feature 1-1
+Now you can use prettier,  if you select code on any website and right-click 
+
+![image](https://github.com/codevilot/Notion-Prettier/assets/18400730/ee323869-5270-42d8-9643-ad1f436dc3fa)
+
+
 ### Feature 2 - Notion Shortcut
 1. Press ```Alt``` + ```Shift``` to toggle the note shortcut window.
 
